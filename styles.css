@@ -1,0 +1,84 @@
+/* Tailwind Konfigurasi Kustom */
+:root {
+  --color-slate-850: #151e2e;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+}
+
+/* Animasi Kustom */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes ping-slow {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.delay-200 { 
+  animation-delay: 0.2s; 
+}
+
+.delay-400 { 
+  animation-delay: 0.4s; 
+}
+
+/* Tab Content Styling */
+.tab-content { 
+  display: none; 
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.tab-content.active { 
+  display: grid; 
+  opacity: 1; 
+}
+
+.tab-content-software { 
+  display: none; 
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.tab-content-software.active { 
+  display: grid; 
+  opacity: 1; 
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar { 
+  width: 8px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: #0f172a; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: #14b8a6; 
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+  background: #0d9488; 
+}
+
+/* Utility Classes */
+body {
+  padding: 0;
+}
+
+.title {
+  color: #5C6AC4;
+}
