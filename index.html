@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Isroni</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- LAYAR SELAMAT DATANG -->
+    <div id="welcome-screen" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-slate-950 transition-opacity duration-1000 opacity-100">
+        <div class="relative">
+            <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg blur opacity-30 animate-pulse"></div>
+            <h1 class="relative text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-center tracking-tight px-4 py-2">
+                Wilujeng Sumping
+            </h1>
+        </div>
+        <p class="mt-4 text-xl md:text-2xl text-slate-400 font-medium animate-bounce mt-8">
+            di Website Abdi
+        </p>
+        <div class="mt-10 flex space-x-2">
+            <div class="w-3 h-3 bg-teal-500 rounded-full animate-ping-slow"></div>
+            <div class="w-3 h-3 bg-blue-500 rounded-full animate-ping-slow delay-200"></div>
+            <div class="w-3 h-3 bg-indigo-500 rounded-full animate-ping-slow delay-400"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 tracking-wider">
+                ISRONI.
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-teal-400 transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-teal-400 transition-colors">Tentang</a>
+                <a href="#portfolio" class="hover:text-teal-400 transition-colors">Portofolio</a>
+                <a href="#contact" class="hover:text-teal-400 transition-colors">Kontak</a>
+            </div>
+            <button class="md:hidden text-slate-300 hover:text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECTION: BERANDA -->
+        <section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+            <div class="absolute top-20 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob" style="animation-delay: 2s;"></div>
+
+            <div class="container mx-auto px-6 md:px-12 relative z-10">
+                <div class="max-w-3xl">
+                    <p class="text-teal-400 font-medium mb-4 text-lg"><i class="fas fa-hand-sparkles mr-2"></i>Halo, perkenalkan saya</p>
+                    <h1 class="text-5xl md:text-7xl font-bold text-slate-100 mb-6 leading-tight">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Isroni</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-4xl font-semibold text-slate-300 mb-6">
+                        Fisika Instrumentasi & IoT Enthusiast.
+                    </h2>
+                    <p class="text-slate-400 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
+                        Lulusan Fisika Institut Teknologi Sumatera. Memiliki keahlian komprehensif dalam perancangan sistem instrumentasi, integrasi sensor, analisis data, machine learning, serta pembuatan Antarmuka Grafis (GUI).
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#portfolio" class="px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-600 rounded-full font-semibold hover:shadow-lg hover:shadow-teal-500/30 transition-all transform hover:-translate-y-1">
+                            Lihat Karya Saya
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border border-slate-700 rounded-full font-semibold hover:border-teal-400 hover:text-teal-400 transition-all">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TENTANG -->
+        <section id="about" class="py-24 bg-slate-800/50 relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <i class="fas fa-user-astronaut text-teal-400 text-3xl"></i>
+                            <h2 class="text-3xl md:text-4xl font-bold">Tentang Saya</h2>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed mb-6 text-lg text-justify">
+                            Saya terbiasa bekerja secara kolaboratif maupun mandiri, mampu mengimplementasikan inovasi melalui prototipe yang mendukung keberlanjutan dan efisiensi proses. Berorientasi pada solusi, cepat beradaptasi dengan teknologi baru, dan memiliki motivasi tinggi dalam pengembangan diri.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed mb-10 text-lg text-justify">
+                            Berpengalaman dari riset akademik hingga pengelolaan fasilitas di institusi formal, saya siap memberikan kontribusi nyata terhadap kemajuan teknologi dan institusi tempat saya berada.
+                        </p>
+                        <a href="#" class="inline-flex items-center space-x-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg text-white font-medium transition-colors group">
+                            <i class="fas fa-download group-hover:-translate-y-1 transition-transform"></i>
+                            <span>Download CV Saya</span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors shadow-xl group">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-microchip text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-1">IoT</h3>
+                            <p class="text-slate-400 font-medium text-sm">Integrasi Sensor & Sistem</p>
+                        </div>
+                        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors shadow-xl group">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-certificate text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-1">3+</h3>
+                            <p class="text-slate-400 font-medium text-sm">Sertifikasi Kompetensi</p>
+                        </div>
+                        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors shadow-xl group">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-book-journal-whills text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-1">94%</h3>
+                            <p class="text-slate-400 font-medium text-sm">Akurasi Model Riset ML</p>
+                        </div>
+                        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors shadow-xl group">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-trophy text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-1">5+</h3>
+                            <p class="text-slate-400 font-medium text-sm">Prestasi Diraih</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PORTOFOLIO -->
+        <section id="portfolio" class="py-24 relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Portofolio & Rekam Jejak</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-teal-400 to-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- TAB BUTTONS -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button onclick="openTab('pengalaman')" id="btn-pengalaman" class="tab-btn active bg-teal-500 text-white shadow-lg shadow-teal-500/30 flex items-center space-x-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300">
+                        <i class="fas fa-briefcase"></i> <span>Pengalaman</span>
+                    </button>
+                    <button onclick="openTab('sertifikat')" id="btn-sertifikat" class="tab-btn bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white flex items-center space-x-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300">
+                        <i class="fas fa-award"></i> <span>Pendidikan & Sertifikat</span>
+                    </button>
+                    <button onclick="openTab('projek')" id="btn-projek" class="tab-btn bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white flex items-center space-x-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300">
+                        <i class="fas fa-code"></i> <span>Projek & Publikasi</span>
+                    </button>
+                    <button onclick="openTab('prestasi')" id="btn-prestasi" class="tab-btn bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white flex items-center space-x-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300">
+                        <i class="fas fa-trophy"></i> <span>Prestasi</span>
+                    </button>
+                    <button onclick="openTab('software')" id="btn-software" class="tab-btn bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white flex items-center space-x-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300">
+                        <i class="fas fa-desktop"></i> <span>Software</span>
+                    </button>
+                </div>
+
+                <!-- TAB 1: PENGALAMAN -->
+                <div id="tab-pengalaman" class="tab-content active grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400 transition-colors">Pengelolaan Fasilitas Umum</h3>
+                                <p class="text-blue-400 font-medium mt-1">Rumah Tahanan Negara Kelas IIB Pandeglang</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">Terkini</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Mengaudit fasilitas dan digitalisasi data BMN berbasis website.</p>
+                        <button onclick="showModal('Pengelolaan Fasilitas Umum', 'Rutan Kelas IIB Pandeglang', 'Terkini', 'Mengaudit kelayakan berbagai fasilitas umum dan infrastruktur teknis instansi secara berkala dan sinkronisasi data.', '<ul><li>Mempelajari regulasi PSP (Penetapan Status Penggunaan) untuk aset negara.</li><li>Sinkronisasi data aset fisik dengan SAKTI.</li><li>Mengembangkan website manajemen BMN.</li><li>Troubleshooting perangkat keras (PC/Printer).</li></ul>')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400 transition-colors">Asisten Penelitian</h3>
+                                <p class="text-blue-400 font-medium mt-1">ITERA, Lampung</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">Jun - Okt 2023</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Merancang sistem elektronika, GUI Nextion, dan pengolahan data Machine Learning.</p>
+                        <button onclick="showModal('Asisten Penelitian', 'Institut Teknologi Sumatera', 'Juni - Oktober 2023', 'Implementasi sistem instrumentasi dan GUI untuk pengumpulan 500 sampel data.', '<ul><li>Merancang skema wiring diagram integrasi sistem elektronik.</li><li>Membuat GUI berbasis LCD Nextion.</li><li>Mengintegrasikan jaringan sensor dengan mikrokontroler (IoT).</li><li>Analisis data menggunakan machine learning.</li></ul>')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400 transition-colors">Mentor Riset (Physics Intern)</h3>
+                                <p class="text-blue-400 font-medium mt-1">Prodi Fisika ITERA</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">Nov 2023 - Mei 2024</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Membimbing siswa dalam tahapan mini riset instrumentasi fisika.</p>
+                        <button onclick="showModal('Mentor Riset', 'Physics Short-Term Internship', 'Nov 2023 - Mei 2024', 'Berperan sebagai mentor untuk kelompok keahlian instrumentasi bagi siswa SMA/MA/SMK.', 'Membimbing peserta dalam seluruh tahapan mini riset, mulai dari perancangan, penerapan, hingga presentasi hasil. Memberikan pendampingan intensif untuk mengintegrasikan pembelajaran teori dengan praktik langsung di laboratorium.')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400 transition-colors">Pengajar & Media Sosial</h3>
+                                <p class="text-blue-400 font-medium mt-1">Yayasan Sabtu Mengajar</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">2020 - 2023</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Mengajar serta merancang publikasi digital untuk yayasan pendidikan di Pandeglang.</p>
+                        <button onclick="showModal('Pengajar & Pengelola Media Sosial', 'Yayasan Sabtu Mengajar Pandeglang', '2020 - 2023', 'Bertugas sebagai pengajar sukarela dan mengelola identitas digital yayasan.', 'Bertugas sebagai pengajar di yayasan. Mengelola media sosial dengan mempublikasikan kegiatan, menyusun rencana konten, dan membuat desain grafis untuk kebutuhan publikasi kepada masyarakat luas.')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SERTIFIKAT -->
+                <div id="tab-sertifikat" class="tab-content grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400">Sarjana Sains (S.Si), Fisika</h3>
+                                <p class="text-blue-400 font-medium mt-1">Institut Teknologi Sumatera</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">2021 - 2025</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Fokus pada Fisika Instrumentasi. Lulus dengan IPK 3.31/4.00.</p>
+                        <button onclick="showModal('Sarjana Sains Fisika', 'Institut Teknologi Sumatera', '2021 - 2025', 'Pendidikan Sarjana berfokus pada teknologi instrumentasi dan IoT.', 'Keahlian Relevan: Fisika Instrumentasi, Metrologi dan Kalibrasi, Sensory Integration, Internet of Things (IoT), Desain Antarmuka Grafis (GUI).')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400">Class Data Analyst</h3>
+                                <p class="text-blue-400 font-medium mt-1">Sertifikasi Profesional</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">2025</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Pelatihan intensif dan sertifikasi kompetensi analisis data.</p>
+                        <button onclick="showModal('Sertifikasi Data Analyst', 'Badan Sertifikasi/Penyelenggara', '2025', 'Peningkatan skill pada ranah pengolahan dan visualisasi data.', 'Telah menyelesaikan kelas Data Analyst dengan fokus pada metode analisis statistik, pemrosesan data (data wrangling), hingga pembuatan visualisasi untuk menarik kesimpulan yang mendukung pengambilan keputusan berbasis data.')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 3: PROJEK -->
+                <div id="tab-projek" class="tab-content grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group col-span-1 md:col-span-2">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400">Publikasi: Development of a Portable Low-Cost Multispectral Sensor</h3>
+                                <p class="text-blue-400 font-medium mt-1">Journal of Energy, Material, and Instrumentation Technology</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">2025</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Penelitian pengembangan prototipe alat pengklasifikasi jenis madu asli menggunakan IoT dan Model Artificial Neural Network (ANN).</p>
+                        <button onclick="showModal('Publikasi Jurnal', 'Journal of Energy, Material, and Instrumentation Technology', '2025', 'Implementasi Sensor AS7265X Berbiaya Rendah Untuk Identifikasi Keaslian Madu.', 'Penelitian ini menjawab tantangan nyata produsen madu skala kecil. Memaparkan pengembangan prototipe portabel mengintegrasikan sensor multispektral AS7265x, IoT, dan machine learning. Terbukti berhasil mengklasifikasikan 3 jenis madu asli Indonesia dengan akurasi impresif 94,05% menggunakan (ANN).<br><br>Saya berperan sebagai <b>Penulis Kedua (Second Author)</b>, berkontribusi dalam mengarahkan, menganalisis, dan merealisasikan prototipe mulai dari tahap perancangan hingga validasi model.')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail Lengkap</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 4: PRESTASI -->
+                <div id="tab-prestasi" class="tab-content grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400">Penerima Pendanaan PHMW</h3>
+                                <p class="text-blue-400 font-medium mt-1">Program Hibah Mahasiswa Wirausaha</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">2024</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Berhasil memperoleh pendanaan hibah kewirausahaan mahasiswa tingkat kampus/nasional.</p>
+                        <button onclick="showModal('Pendanaan PHMW', 'Program Hibah Mahasiswa Wirausaha', '2024', 'Lolos seleksi penerimaan pendanaan untuk rancangan wirausaha mahasiswa.', 'Menyusun proposal yang inovatif dan terstruktur hingga berhasil melewati seleksi ketat dewan juri untuk mendapatkan dana hibah pengembangan usaha.')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800 transition-all duration-300 group">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-100 group-hover:text-teal-400">Juara 2 Kompetisi Konten SDGs</h3>
+                                <p class="text-blue-400 font-medium mt-1">Kompetisi Kreatif</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">2023</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Menciptakan konten media edukatif mengenai Sustainable Development Goals.</p>
+                        <button onclick="showModal('Juara 2 SDGs', 'Kompetisi Konten SDGs', '2023', 'Penghargaan atas kreativitas dalam mengedukasi isu keberlanjutan global.', 'Merancang dan memproduksi konten yang menarik secara visual dan bermakna mengenai poin-poin Pembangunan Berkelanjutan, mengalahkan puluhan peserta lainnya.')" class="flex items-center text-teal-500 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Lihat Detail</span> <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 5: SOFTWARE -->
+                <div id="tab-software" class="tab-content-software grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg" alt="Arduino IDE" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Arduino IDE</h3>
+                            <p class="text-slate-400 text-xs mt-1">Hardware Programming</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-microchip text-teal-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Proteus</h3>
+                            <p class="text-slate-400 text-xs mt-1">Simulasi Elektronik</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-breadboard text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Fritzing</h3>
+                            <p class="text-slate-400 text-xs mt-1">Desain Sirkuit</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Python</h3>
+                            <p class="text-slate-400 text-xs mt-1">Data & Machine Learning</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Visual Studio Code</h3>
+                            <p class="text-slate-400 text-xs mt-1">Code Editor</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-code text-red-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Dev C++</h3>
+                            <p class="text-slate-400 text-xs mt-1">C/C++ Compiler</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-sliders-h text-indigo-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Nextion Editor</h3>
+                            <p class="text-slate-400 text-xs mt-1">GUI Interface</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-chart-line text-orange-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Origin</h3>
+                            <p class="text-slate-400 text-xs mt-1">Grafik & Analisis Data</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" alt="Google Colab" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Google Colab</h3>
+                            <p class="text-slate-400 text-xs mt-1">Cloud Notebook</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-flowchart text-cyan-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Flowgorithm</h3>
+                            <p class="text-slate-400 text-xs mt-1">Flowchart & Algoritma</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-table text-green-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Microsoft Excel</h3>
+                            <p class="text-slate-400 text-xs mt-1">Spreadsheet</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-table text-green-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Google Sheets</h3>
+                            <p class="text-slate-400 text-xs mt-1">Cloud Spreadsheet</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-book text-red-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Zotero</h3>
+                            <p class="text-slate-400 text-xs mt-1">Reference Manager</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-file-word text-blue-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Microsoft Word</h3>
+                            <p class="text-slate-400 text-xs mt-1">Document Editor</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-file-powerpoint text-orange-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">PowerPoint</h3>
+                            <p class="text-slate-400 text-xs mt-1">Presentasi</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-code text-yellow-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Google AppScript</h3>
+                            <p class="text-slate-400 text-xs mt-1">Otomasi Google</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-envelope text-teal-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">EmailJS</h3>
+                            <p class="text-slate-400 text-xs mt-1">Email Service</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Canva_Logo.svg" alt="Canva" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Canva</h3>
+                            <p class="text-slate-400 text-xs mt-1">Design Tool</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-video text-red-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">CapCut</h3>
+                            <p class="text-slate-400 text-xs mt-1">Video Editor</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-wand-magic-sparkles text-purple-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">Adobe Express</h3>
+                            <p class="text-slate-400 text-xs mt-1">Creative Suite</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-palette text-pink-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">PixelLab</h3>
+                            <p class="text-slate-400 text-xs mt-1">Text Editor Photo</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-5 flex items-center gap-5 hover:bg-slate-800 transition-all duration-300 group hover:-translate-y-2">
+                        <div class="shrink-0 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                            <i class="fas fa-image text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400">PicsArt</h3>
+                            <p class="text-slate-400 text-xs mt-1">Photo Editor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: KONTAK -->
+        <section id="contact" class="py-24 bg-slate-950 border-t border-slate-900">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Mari Berdiskusi!</h2>
+                        <p class="text-slate-400 text-lg mb-10">
+                            Tertarik untuk bekerja sama, riset bareng, atau memiliki pertanyaan? Jangan ragu untuk mengirim pesan kepada saya melalui kontak di bawah ini.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-teal-400 shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-300 font-medium">Email</h4>
+                                    <p class="text-slate-500">isroni010@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-blue-400 shrink-0">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-300 font-medium">Telepon / WhatsApp</h4>
+                                    <p class="text-slate-500">+62 838 7234 8380</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-indigo-400 shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-300 font-medium">Lokasi</h4>
+                                    <p class="text-slate-500">Pandeglang, Banten, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 flex space-x-4">
+                            <a href="https://linkedin.com/in/isroni1" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all text-xl"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan form (simulasi) berhasil di klik.');">
+                            <div>
+                                <label class="block text-slate-400 text-sm font-medium mb-2">Nama Lengkap</label>
+                                <input type="text" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-sm font-medium mb-2">Alamat Email</label>
+                                <input type="email" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="email@contoh.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-sm font-medium mb-2">Pesan</label>
+                                <textarea rows="4" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors resize-none" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold py-4 rounded-xl hover:shadow-lg hover:shadow-teal-500/20 transition-all transform hover:-translate-y-1">
+                                Kirim Pesan Sekarang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 bg-slate-950 border-t border-slate-900/50 text-center text-slate-500 text-sm">
+            <p>© <script>document.write(new Date().getFullYear())</script> Isroni. Dibuat dengan format HTML/CSS.</p>
+        </footer>
+    </main>
+
+    <!-- MODAL -->
+    <div id="portfolioModal" class="fixed inset-0 z-[110] flex items-center justify-center px-4 hidden">
+        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl shadow-2xl p-8 z-10 transform scale-95 transition-all duration-300 opacity-0" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-slate-800 hover:bg-red-500 rounded-full text-slate-400 hover:text-white transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="mb-6 mt-2">
+                <span id="modal-category" class="inline-block px-3 py-1 bg-teal-500/10 text-teal-400 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
+                    Info Detail
+                </span>
+                <h2 id="modal-title" class="text-3xl font-bold text-white mb-3">Judul Item</h2>
+                <div class="flex flex-wrap items-center text-sm text-slate-400 gap-4">
+                    <span class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> <span id="modal-subtitle">Subjudul</span></span>
+                    <span id="modal-year" class="px-2 py-0.5 bg-slate-800 rounded">Tahun</span>
+                </div>
+            </div>
+            
+            <div class="prose prose-invert max-w-none">
+                <p id="modal-summary" class="text-slate-300 text-lg leading-relaxed mb-4">
+                    Ringkasan singkat tentang pengalaman ini.
+                </p>
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-800">
+                    <h4 class="text-white font-medium mb-3">Deskripsi Lengkap:</h4>
+                    <div id="modal-description" class="text-slate-400 leading-relaxed text-sm">
+                        Detail deskripsi akan muncul di sini.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
