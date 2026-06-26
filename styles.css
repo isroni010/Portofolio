@@ -1,11 +1,15 @@
-/* Tailwind Konfigurasi Kustom */
+/* =======================================================
+   1. TAILWIND KONFIGURASI KUSTOM & VARIABEL
+   ======================================================= */
 :root {
   --color-slate-850: #151e2e;
   --color-slate-900: #0f172a;
   --color-slate-950: #020617;
 }
 
-/* Animasi Kustom */
+/* =======================================================
+   2. LOGIKA ANIMASI KUSTOM (BLOB & PING)
+   ======================================================= */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }
@@ -33,32 +37,96 @@
   animation-delay: 0.4s; 
 }
 
-/* Tab Content Styling */
-.tab-content { 
-  display: none; 
+/* =======================================================
+   3. PERBAIKAN AKURASI JARAK ANTAR-SUBMENU (TAB STYLING)
+   ======================================================= */
+.tab-content, .tab-content-software { 
+  display: none !important; /* Memaksa tab non-aktif mengecil menjadi 0px agar tidak mendorong konten lain */
   opacity: 0; 
   transition: opacity 0.3s ease-in-out; 
 }
 
 .tab-content.active { 
-  display: grid; 
+  display: grid !important; 
   opacity: 1; 
-}
-
-.tab-content-software { 
-  display: none; 
-  opacity: 0; 
-  transition: opacity 0.3s ease-in-out; 
 }
 
 .tab-content-software.active { 
-  display: grid; 
+  display: grid !important; 
   opacity: 1; 
 }
 
-/* Scrollbar Styling */
+/* Pengecualian khusus untuk Tab Teknologi & Edukasi saat aktif
+   agar layout Accordion tersusun rapat secara vertikal */
+#tab-teknologi-riset.active,
+#tab-edukasi-manajerial.active {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* =======================================================
+   4. SWIPER SLIDER CUSTOM STYLING
+   ======================================================= */
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #14b8a6;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #14b8a6;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #14b8a6;
+  background-color: rgba(15, 23, 42, 0.7);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(20, 184, 166, 0.3);
+}
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* =======================================================
+   5. KUSTOMISASI SCROLLBAR (VERTICAL & HORIZONTAL)
+   ======================================================= */
 ::-webkit-scrollbar { 
   width: 8px; 
+  height: 8px; /* Mengatur ketinggian scrollbar horizontal pada manual slider */
 }
 
 ::-webkit-scrollbar-track { 
@@ -74,11 +142,32 @@
   background: #0d9488; 
 }
 
-/* Utility Classes */
+/* =======================================================
+   6. UTILITY & BASE CLASSES
+   ======================================================= */
 body {
   padding: 0;
+  margin: 0;
 }
 
 .title {
   color: #5C6AC4;
+}
+
+/* PREVENT LAYOUT SHIFT (Mencegah pergeseran layout saat scrollbar muncul) */
+html {
+  overflow-y: scroll;
+}
+
+/* =======================================================
+   7. OPTIMASI RESPONSIVITAS MOBILE (MEDIA QUERIES)
+   ======================================================= */
+@media (max-width: 640px) {
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  #modalContent {
+    border-radius: 1rem;
+  }
 }
